@@ -1,0 +1,52 @@
+.icon-box{
+    display: flex;
+    gap:10px;
+    padding:10px;
+    border-radius: 5px;
+    --icon-box-icon-color: rgb(255,0,0);
+    --icon-box-border-color: rgb(255,0,0);
+    --icon-box-background-color: rgba(255, 0, 0, 0.246);
+    border: 1px solid var(--icon-box-border-color);
+    background-color:  var(--icon-box-background-color);
+    margin-bottom: 10px;
+    --icon-box-text-color: rgb(255, 255, 255);
+}
+    .icon-box.warn{
+        --icon-box-border-color: rgb(255, 123, 0);
+        --icon-box-icon-color: rgb(255, 123, 0);
+        --icon-box-background-color: rgba(255, 123, 0, 0.342);
+        --icon-box-text-color: rgb(247, 224, 202);
+    }
+    .icon-box.idea{
+        --icon-box-border-color: rgb(232, 162, 0);
+        --icon-box-icon-color: rgb(232, 162, 0);
+        --icon-box-background-color: rgba(232, 162, 0, 0.303);
+        --icon-box-text-color: rgb(255, 250, 175);
+    }
+    .icon-box.info{
+        --icon-box-border-color: rgb(24, 132, 248);
+        --icon-box-icon-color: rgb(24, 132, 248);
+        --icon-box-background-color: rgba(24, 132, 248, 0.304);
+        --icon-box-text-color: rgb(225, 232, 251);
+    }
+        .icon-box > svg,
+        .icon-box > i
+        {
+            flex: 0 0 auto;
+            display:block;
+            margin-top:5px;
+            color:  var(--icon-box-icon-color);
+        }
+        .icon-box-content {
+            flex: 1 1 auto;
+            font-size: 15px;
+            line-height: 1.5em;
+            color:  var(--icon-box-text-color);
+            padding-right: 10px;
+        }
+            .icon-box-content ul{
+                padding-left: 20px;
+            }
+            .icon-box-content p{
+                margin-top: 0px;
+            }

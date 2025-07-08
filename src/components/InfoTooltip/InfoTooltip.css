@@ -1,0 +1,13 @@
+.info-tooltip{
+    cursor: pointer;
+    /* color: rgb(var(--theme-color-cyan),1); */
+    color: rgba(255, 255, 255, 0.741);
+    /* font-size: 1.rem; */
+}
+
+    .info-tooltip-tooltip{
+        z-index: 100;
+        background: rgb(var(--background-color-2),1)!important;
+        opacity: 1!important;
+        border-radius: 5px!important;
+    }

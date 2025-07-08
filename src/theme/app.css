@@ -1,0 +1,232 @@
+@import 'button.css';
+@import 'scrollbar.css';
+@import 'form.css';
+@import 'layout.css';
+@import 'theme.css';
+@import 'image.css';
+@import 'loading.css';
+@import 'confirm.css';
+@import 'modal.css';
+@font-face {
+    font-family: "Roboto";
+    src: url("./fonts/Roboto/Roboto.ttf");
+}
+
+html {
+    font-family: "Roboto";
+    --font-color: 255,255,255;
+
+    --background-color-1: rgb(16, 21, 40);
+    --background-color-1: 16, 21, 40;
+
+    --background-color-2: rgb(23, 27, 43);
+    --background-color-2: 23, 27, 43;
+    
+    --background-color-3: rgb(20, 41, 52);
+    --background-color-3: 20, 41, 52;
+
+    --background-color-4: rgb(20, 47, 59);
+    --background-color-4: 20, 47, 59;
+
+    --test: rgb(212, 43, 125);
+    --desp-purple-color: rgb(239, 43, 137);
+    --theme-color-1: 239, 43, 137;
+    
+    --test: rgb(93, 70, 149);
+    --desp-violet-color: rgb(123, 52, 219);
+    --theme-color-2: 123, 52, 219;
+
+    --test: rgb(181, 36, 106);
+    --theme-color-1-dark: 181, 36, 106;
+
+    --test: rgb(181, 64, 144);
+    --theme-color-3: 181, 64, 144;
+
+    --test: rgb(153, 153, 153);
+    --theme-color-4: 153, 153, 153;
+
+    --border-color-1: 255,255,255,0.2;
+
+    --theme-color-red: rgb(197, 29, 60);
+    --theme-color-red: 197, 29, 60;
+
+    --theme-color-green: rgb(74, 150, 20);
+    --theme-color-green: 74, 150, 20;
+
+    --theme-color-blue: rgb(20, 143, 150);
+    --theme-color-blue: 20, 143, 150;
+
+    --theme-color-cyan: rgb(99, 193, 224);
+    --theme-color-cyan: 99, 193, 224;
+
+    --theme-color-grey: rgb(104, 104, 104);
+    --theme-color-grey: 104, 104, 104;
+
+    --test: rgb(44, 49, 62);
+    --loading-color-1: 44, 49, 62;
+
+    --test: rgb(28, 32, 41);
+    --loading-color-2: 28, 32, 41;
+
+    --validation-color: rgb(243, 152, 66);
+    --validation-color: 243, 152, 66;
+
+    --loading-item-radius:3px;
+
+
+    /* --test: rgb(19, 108, 251);
+    --theme-color-1: 19, 108, 251;
+
+    --test: rgb(86, 37, 182);
+    --theme-color-2: 86, 37, 182; */
+
+    --base-color1: #d22b7d;
+    /*magenta*/
+    --base-color1a: #b54090;
+    --base-color2: #5e4796;
+    /* --base-color2a:  */
+    --regular-links-color: var(--base-color2);
+    --base-text-color0: #fff;
+    --base-text-color1: #101627;
+    --base-text-color2: #402c54;
+    --base-text-color3: #9a9999;
+    --base-text-color4: #1d1d1b;
+    --secondary-color1: #5c606c;
+    --secondary-color2: #f7a438;
+    --secondary-color3: #6c6b67;
+    --secondary-color4: #17213a;
+
+    --transition-time: 0.2s;
+
+    --border:1px solid rgba(255, 255, 255, 0.1);
+
+    /* BACKGROUND COLORS */
+    /* --section-color: rgba(0,0,0,0.5); */
+    --sub-section-color: rgba(0,0,0,0.5);
+    --sub-section-color2: rgba(0,0,0,0.3);
+
+    /* STATUS COLORS */
+    --status-running: rgb(17, 107, 156);
+    --status-ongoing: rgb(186, 180, 0);
+    --status-active: rgb(138, 210, 29);
+    --status-complete: rgb(25, 165, 34);
+    --status-error: rgb(159, 40, 40);
+    --status-inactive: grey;
+
+
+    /* INPUTS */
+    --input-border:1px solid rgba(255, 255, 255, 0.3);
+    --input-border-selected:1px solid rgba(255, 255, 255, 0.5);
+    --input-background: transparent;
+    --input-background-selected: rgba(255, 255, 255, 0.05);
+
+    --required-color: red;
+
+    
+    --navigation-height: 64px;
+
+    color: rgb(var(--font-color));
+}
+body, #root, #app{
+    height: var(--app-height);
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    box-sizing: border-box;
+    min-width: 0px;
+    min-height: 0px;
+    color: rgb(var(--font-color));
+    overflow: hidden;
+    
+}
+body *{
+    font-family: "Roboto";
+    box-sizing: border-box;
+    box-sizing: border-box;
+    position: relative;
+}
+
+#react-confirm-alert > *{
+    z-index: 5000;
+}
+
+#app{
+    background-color: rgb(var(--background-color));
+    overflow: auto;
+}
+
+.centered{
+    text-align: center;
+}
+.centered-content{
+    display: flex;
+    flex:1;
+    justify-content: center;
+}
+
+.link, a{
+    color: rgb(var(--theme-color-2));
+    text-decoration: underline;
+    display: inline;
+    cursor: pointer;
+}
+
+.clickable{
+    cursor: pointer;
+}
+
+.no-data{
+    opacity: 0.5;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    font-size: 12px;
+    font-weight: 800;
+}
+    .no-data.padding{
+        padding:20px;
+    }
+    .no-data.centered{
+        text-align: center;
+        width: 100%;
+        display: flex;
+    }
+
+
+.toast-error{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+    .toast-error-message-more-details .toggle-button{
+        font-size: 10px;
+    }
+        .toast-error-message-more-details .toggle-button-toggle{
+            font-size: 8px;
+        }
+    .toast-error-message{
+        font-size: 13px;
+        /* font-weight: 600; */
+    }
+    .toast-error-transation-id{
+        display: flex;
+        align-items: flex-end;
+        gap: 5px;
+        justify-content: space-between;
+    }
+        .toast-error-transation-id-text{
+            display: flex;
+            flex-direction: column;
+            font-size: 11px;
+        }
+            .toast-error-transation-id label{
+                /* padding-bottom: 2px; */
+                font-size: 9px;
+                font-weight: 600;
+                letter-spacing: 1px;
+            }
+        .toast-error-transation-id .copy-button{
+            font-size: 10px;
+            height: 2em;
+            width: 2em;
+        }
+        

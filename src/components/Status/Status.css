@@ -1,0 +1,31 @@
+.status{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    text-transform: capitalize;
+    --status-color: var(--status-inactive);
+}
+
+.status svg{
+    font-size: 0.8em;
+    /* margin-right: 10px; */
+    color: var(--status-color);
+}
+    .status.error,
+    .status.failed{
+        --status-color: var(--status-error);
+    }
+    .status.started{
+        --status-color: var(--status-running);
+    }
+    .status.active{
+        --status-color: var(--status-active);
+    }
+    .status.succeeded,
+    .status.complete{
+        --status-color: var(--status-complete);
+    }
+    .status.none,
+    .status.inactive{
+        --status-color: var(--status-inactive);
+    }

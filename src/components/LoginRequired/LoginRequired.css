@@ -1,0 +1,43 @@
+.login-required{
+    display: inline-flex;
+    
+    flex-direction: column;
+    align-items: center;
+    padding:30px;
+    background-color: rgb(var(--background-color-2));
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.374);
+    margin:30px auto;
+    /* margin:auto; */
+    justify-self: center;
+}
+.login-required p{
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+    .login-required .button{
+        align-self: center;
+        justify-self: center;
+    }
+
+
+.login-required.small{
+    padding:8px 15px;
+    flex-direction: row;
+    margin:0px;
+    margin-bottom:10px;
+
+    /* background-color: transparent;
+    box-shadow: none; */
+}
+    .login-required.small p{
+        font-size: 14px;
+        text-transform: none;
+        letter-spacing: 1px;
+        margin-bottom: 0px;
+        margin-right: 10px;
+        margin-top: 0px;
+        font-size: 12px;
+    }

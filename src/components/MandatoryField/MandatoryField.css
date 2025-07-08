@@ -1,0 +1,12 @@
+.mandatory-field{
+    font-weight: 500;
+    font-size: 15px;
+    color: rgb(193, 193, 193);
+    /* margin-bottom: 30px; */
+}
+    .mandatory-field span{
+        /* color: rgb(var(--theme-color-1)); */
+        color: red;
+        padding-right:5px;
+        font-weight: 800;
+    }

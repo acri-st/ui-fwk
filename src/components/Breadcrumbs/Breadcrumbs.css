@@ -1,0 +1,37 @@
+
+.breadcrumbs{
+    height: 60px;
+    display: flex;
+    align-items: center;
+}
+.breadcrumbs.padding{
+    padding-left: 80px;
+}
+    .breadcrumb{
+        font-size: 16px;
+        font-weight: 300;
+        color:rgb(var(--theme-color-1));
+        text-decoration: none;
+        transition: 0.2s;
+        position: relative;
+        display: flex;
+        cursor: pointer;
+    }
+        .breadcrumb:hover{
+            color:rgb(var(--theme-color-1));
+        }
+    .breadcrumb.last{
+        color:white;
+        cursor: default;
+    }
+        .breadcrumbs > span{
+            display: block;
+            margin:0px 10px;
+            font-size: 0.8em;
+        }
+        .breadcrumbs .breadcrumb > span{
+            opacity: 0.5;
+            font-weight: 800;
+            font-size: 0.8em;
+            margin-left:5px;
+        }

@@ -1,0 +1,16 @@
+.copy-button{
+    display: inline-flex;
+    width: 35px;
+    height: 35px;
+    border:2px solid rgb(72, 149, 72);
+    color: rgb(72, 149, 72);
+    border-radius: 5px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.3s;
+}
+    .copy-button.copied{
+        background-color: rgb(72, 149, 72);
+        color: white;
+    }

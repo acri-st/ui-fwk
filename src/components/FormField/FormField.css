@@ -1,0 +1,58 @@
+.input-char-limit{
+    position: absolute;
+    bottom:6px;
+    right:6px;
+    background-color: rgb(var(--background-color-1));
+    display: flex;
+    padding: 3px 6px;
+    border-radius: 5px;
+}
+
+.input-char-limit-check{
+    font-weight: 800;
+    margin-right:5px;
+    display: flex;
+}
+.input-char-limit-check:last-child{
+    margin-right:0px;
+}
+    .input-char-limit-check label{
+        font-size: 9px;
+    }
+    .input-char-limit-check-values{
+        display: flex;
+        font-size: 10px;
+        align-items: center;
+    }
+    
+        .input-char-limit-separator{
+            opacity: 0.5;
+        }
+        .input-char-limit-value{
+            margin:0px 3px;
+        }
+        .input-char-limit-check-current{
+
+        }
+
+        .input-char-limit-check-values{
+            color: rgb(190, 108, 31);
+        }
+        .input-char-limit-check-values.valid{
+            color: rgb(58, 175, 58);
+        }
+        /* .input-char-limit-check-verify{
+            color: rgb(190, 108, 31);
+        }
+        .input-char-limit-check-values.valid .input-char-limit-check-current,
+        .input-char-limit-check-values.valid .input-char-limit-check-verify{
+            color: rgb(58, 175, 58);
+        } */
+
+.no-data-value{
+    opacity: 0.5;
+    font-size: 0.7em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 800;
+}

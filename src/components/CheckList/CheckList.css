@@ -1,0 +1,76 @@
+
+.check-list{
+    display: flex;
+    min-height: 0;
+    flex-direction: column;
+    height: 100%;
+}
+.check-list-values{
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* min-height: 0; */
+    overflow: auto;
+}
+
+.check-list-item{
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+
+}
+
+    .check-list-item .checkbox{
+        margin-right:10px;
+    }
+
+    .check-list-item .check-list-label{
+        cursor: pointer;
+        transition: var(--transition-time);
+        line-height: 1em;
+        opacity: 0.7;
+        -webkit-user-select: none; /* Safari */
+        -ms-user-select: none; /* IE 10 and IE 11 */
+        user-select: none; /* Standard syntax */
+        padding-left:5px;
+        transform: translateX(-5px);
+    }
+        .check-list-item label{
+            cursor: pointer;
+        }
+        .check-list-item.checked .check-list-label,
+        .check-list-item:hover .check-list-label{
+            opacity: 1;
+            transform: translateX(0px);
+        /* color: rgb(var(--theme-color-1)); */
+        }
+        .check-list-item .check-list-tooltip{
+            margin-top: 6px;
+            font-size: 0.9em;
+            opacity: 0.6;
+            line-height: 1.3em;
+        }
+
+        .check-list.disabled label,
+        .check-list.disabled .check-list-box{
+            cursor:progress;
+            --checkbox-color: rgb(255,255,255,0.4);
+            opacity: 0.7;
+        }
+        .check-list.disabled .check-list-item.checked .check-list-box{
+            --checkbox-color: rgb(150,150,150,0.8);
+        }
+
+    .check-list-toggle-all{
+        border-bottom: 2px solid rgba(255,255,255,0.2);
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+    }
+
+        .check-list-toggle-all label{
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-size: 0.9em;
+            font-weight: 800;
+        }
+
+        

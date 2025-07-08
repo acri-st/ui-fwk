@@ -1,0 +1,26 @@
+.user-link{
+    display: inline-flex;
+    font-size: 15px;
+    align-items: center;
+    text-decoration: none;
+    color: var(--font-color);
+    transition: var(--transition-time);
+}
+    .user-link-image{
+        height: 1.5em;
+        width: 1.5em;
+        border-radius: 100px;
+        background-size: contain;
+        background-position: center;
+        box-shadow: 0px 0px 5px 0px rgba(0,0,0,1);
+        margin-right: 5px;
+        
+    }
+    .user-link-name{
+        line-height: 1em;
+        font-size: 1em;
+        font-weight: 800;
+    }
+    .user-link:hover .user-link-name{
+        text-decoration: underline;
+    }

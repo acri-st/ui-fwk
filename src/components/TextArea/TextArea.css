@@ -1,0 +1,21 @@
+.text-area{
+    position: relative;
+}
+.text-area textarea{
+    background-color: transparent;
+    /* background-color: rgb(var(--background-color-4),0.5); */
+    border: 1px solid rgba(255,255,255,0.4);
+    padding:10px;
+    border-radius: 5px;
+    width: 100%;
+    color:rgb(var(--font-color));
+    font-size: 16px;
+    transition: var(--transition-time);
+    margin-right:10px;
+    resize: vertical;
+    height: 150px;
+}
+    .text-area textarea:focus{
+        outline: none;
+        border: 1px solid rgba(255,255,255,0.2);
+    }

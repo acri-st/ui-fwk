@@ -1,0 +1,15 @@
+version: '3.3'
+
+services:
+    
+  # ======================================
+  # -- frontend
+  # ======================================
+  frontend:
+    build:
+      context: .
+      dockerfile: ./_local/Dockerfile
+    volumes:
+      - ./:/frontend/
+    ports:
+      - 8200:8200

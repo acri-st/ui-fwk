@@ -1,0 +1,28 @@
+.user-link-loading{
+    display: inline-flex;
+    font-size: 15px;
+    align-items: center;
+    text-decoration: none;
+    color: var(--font-color);
+    transition: var(--transition-time);
+}
+    .user-link-image-loading{
+        background-color: rgb(var(--loading-color-2));
+        height: 1.5em;
+        width: 1.5em;
+        border-radius: 100px;
+        margin-right: 5px;
+        
+    }
+        .user-link-loading.loading-1 .user-link-image-loading{
+            background-color: rgb(var(--loading-color-1));
+        }
+    .user-link-name-loading{
+        height: 1em;
+        width: 40px;
+        background-color: rgb(var(--loading-color-2));
+        border-radius: var(--loading-item-radius);
+    }
+        .user-link-loading.loading-1 .user-link-name-loading{
+            background-color: rgb(var(--loading-color-1));
+        }

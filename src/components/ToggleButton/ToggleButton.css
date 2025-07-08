@@ -1,0 +1,45 @@
+.toggle-button{
+    display: inline-flex;
+    align-items: center;
+    transition: var(--transition-time);
+    cursor: pointer;
+    font-size: 14px;
+    gap: 0.5em;
+}
+
+.toggle-button:hover .toggle-button-toggle-dot{
+    opacity: 1;
+}
+
+    .toggle-button-toggle{
+        padding:3px;
+        border: 1px solid rgb(255,255,255, 0.8);
+        border-radius: 100px;
+        width: 3em;
+        height: calc(1em + 8px);
+        position: relative;
+    }
+        .toggle-button.light-mode .toggle-button-toggle{
+            border: 1px solid rgba(0, 0, 0, 0.274);
+        }
+        .toggle-button-toggle-dot{
+            top:50%;
+            transform: translateY(-50%);
+            left:3px;
+            position: absolute;
+            border-radius: 100px;
+            height: 1em;
+            width: 1em;
+            background-color: rgb(150,150,150);
+            transition: var(--transition-time);
+            opacity: 0.8;
+        }
+        .toggle-button.toggled .toggle-button-toggle-dot{
+            transform: translateY(-50%) translateX(calc(2em - 8px));
+
+
+            background-color: rgb(var(--theme-color-1));
+        }
+    .toggle-button label{
+        cursor: pointer;
+    }

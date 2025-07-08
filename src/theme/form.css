@@ -1,0 +1,138 @@
+.form-field{
+    width: 100%;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    position: relative;
+}
+
+.required{
+    color: var(--required-color);
+    display: inline-block;
+}
+
+.form-field label{
+    padding-top: 5px;
+    display: block;
+    margin-bottom: 10px;
+    /* width: 100%; */
+    font-size: 17px;
+    letter-spacing: 1px;
+    white-space: nowrap;
+    text-transform: capitalize;
+}
+    .form-field.horizontal{
+        flex-direction: row;
+    }
+        .form-field.horizontal label{
+            flex-direction: row;
+            margin-bottom: 5px;
+            min-width: 180px;
+        }
+    .select-value,
+    .form-field-value{
+        flex:1;
+        position: relative;
+        width: 100%;
+        min-width: 0;
+        gap:10px;
+        display: flex;
+        /* align-items: center; */
+    }
+    .form-field-value.column{
+        flex-direction: column;
+    }
+    
+    .form-field-value{
+    }
+        .form-field-value textarea,
+        .form-field-value .text-area,
+        .form-field-value .select,
+        .form-field-value input{
+            flex:1;
+        }
+
+    .form-field .MuiSvgIcon-root,
+    .form-field .MuiInputBase-root{
+        color: var(--font-color);
+        transition: var(--transition-time);
+    }
+    
+    .form-field .MuiSelect-select,
+    .form-field input,
+    .form-field .form-field-rich-text-input,
+    .form-field textarea,
+    .select-value
+    {
+        border-radius: 4px;
+        width: 100%;
+        background-color: transparent;
+        border: var(--input-border);
+        /* border-radius: 5px; */
+        box-shadow: none;
+        padding: 10px 12px;
+        color: var(--font-color);
+        transition: var(--transition-time);
+        font-size: 16px;
+    }
+        /* .form-field .MuiSelect-select:hover{
+            border: var(--input-border-selected);
+        } */
+
+        /* .form-field .MuiInputBase-root:focus, */
+        .form-field .MuiInputBase-root:hover .MuiOutlinedInput-notchedOutline,
+        .form-field .Mui-focused .MuiOutlinedInput-notchedOutline,
+        .form-field input:focus,
+        .form-field .form-field-rich-text-input:focus,
+        .form-field textarea:focus
+        {
+            transition: var(--transition-time);
+            outline: none;
+            border: var(--input-border-selected)!important;
+            background-color: var(--input-background-selected);
+            box-shadow: none!important;
+        }
+
+    .form-field textarea{
+        height: 200px;
+    }
+    .form-field .table{
+        width: 100%;
+    }
+    .form-field textarea::placeholder,
+    .form-field input::placeholder {
+        font-size: 0.9em;
+        /* letter-spacing: 1px; */
+        opacity: 0.3;
+        color:inherit;
+    }
+    .form-field-button{
+        margin-top:5px;
+        margin-left:10px;
+        width: 150px;
+        display: flex;
+        justify-content: flex-start;
+        justify-content: center;
+        /* display: ; */
+    }
+    .form-field-select{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+
+
+.contact-validation{
+    display: flex;
+    justify-content: space-between;
+    /* align-items: flex-start; */
+}
+
+.contact-validation-right{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    /* height: 100%; */
+}

@@ -1,0 +1,61 @@
+
+
+/*  ===============================
+*   PAGE
+*   =============================== */
+.page-content{
+    display: flex;
+    flex-direction: column;
+    min-height: 0px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    /* overflow: auto;
+    height: 100%;
+    width: 100vw; */
+}
+
+.page-wrapper{
+    display: flex;
+    flex-direction: column;
+    min-height: 0px;
+    height:var(--layout-height);
+    flex-grow: 1;
+    justify-content: flex-start;
+}
+
+.fixed-height{
+    height: var(--app-height);
+}
+.fixed-height .page-wrapper{
+    height: 100%;
+    min-height: 0;
+}
+.fixed-page-content{
+    height: 100%;
+    padding:10px 20px;
+    margin-left:0px;
+    /* overflow: auto; */
+    display: flex;
+    flex-direction: column;
+    min-height: 0px;
+    flex: 1 0 auto;
+    height: calc(var(--app-height) - var(--navigation-height));
+    box-sizing: border-box;
+    /* justify-content: space-between; */
+    
+}
+.fixed-height.fixed-full-page{
+    height: auto;
+}
+.fixed-full-page .fixed-page-content{
+    height: auto;
+}
+
+
+@media screen and (max-width: 800px) {
+    
+    .fixed-page-content{
+        padding:5px 5px;
+    }
+}

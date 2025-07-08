@@ -1,0 +1,470 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.1.1 (Python 3.12.10 on linux)" generated="2025-07-08T14:36:27.893280" rpa="false" schemaversion="5">
+<suite id="s1" name="Tests" source="/tests">
+<kw name="Setup" type="SETUP">
+<kw name="Set Global Variable" owner="BuiltIn">
+<msg time="2025-07-08T14:36:27.908118" level="INFO">${HOST} = http://localhost</msg>
+<arg>${HOST}</arg>
+<arg>%{BASE_URL=http://localhost}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="PASS" start="2025-07-08T14:36:27.907808" elapsed="0.000343"/>
+</kw>
+<kw name="Set Global Variable" owner="BuiltIn">
+<msg time="2025-07-08T14:36:27.908522" level="INFO">${UI_FWK_HOST} = http://localhost:8200</msg>
+<arg>${UI_FWK_HOST}</arg>
+<arg>%{UI_FWK_HOST=http://localhost:8200}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="PASS" start="2025-07-08T14:36:27.908229" elapsed="0.000323"/>
+</kw>
+<kw name="Set Global Variable" owner="BuiltIn">
+<msg time="2025-07-08T14:36:27.908850" level="INFO">${DOMAIN} = localhost</msg>
+<arg>${DOMAIN}</arg>
+<arg>%{DOMAIN=localhost}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="PASS" start="2025-07-08T14:36:27.908614" elapsed="0.000255"/>
+</kw>
+<kw name="Set Global Variable" owner="BuiltIn">
+<msg time="2025-07-08T14:36:27.909168" level="INFO">${BASE_API} = /api/</msg>
+<arg>${BASE_API}</arg>
+<arg>%{BASE_API=/api/}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="PASS" start="2025-07-08T14:36:27.908917" elapsed="0.000272"/>
+</kw>
+<kw name="Set Global Variable" owner="BuiltIn">
+<msg time="2025-07-08T14:36:27.909465" level="INFO">${SERVICE_PORT} = 8080</msg>
+<arg>${SERVICE_PORT}</arg>
+<arg>%{SERVICE_PORT=8080}</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="PASS" start="2025-07-08T14:36:27.909238" elapsed="0.000247"/>
+</kw>
+<kw name="Set Global Variable" owner="BuiltIn">
+<msg time="2025-07-08T14:36:27.909815" level="INFO">${USERNAME} = test2</msg>
+<arg>${USERNAME}</arg>
+<arg>test2</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="PASS" start="2025-07-08T14:36:27.909532" elapsed="0.000306"/>
+</kw>
+<kw name="Set Global Variable" owner="BuiltIn">
+<msg time="2025-07-08T14:36:27.910114" level="INFO">${PASSWORD} = test2</msg>
+<arg>${PASSWORD}</arg>
+<arg>test2</arg>
+<doc>Makes a variable available globally in all tests and suites.</doc>
+<status status="PASS" start="2025-07-08T14:36:27.909891" elapsed="0.000241"/>
+</kw>
+<status status="PASS" start="2025-07-08T14:36:27.907593" elapsed="0.002573"/>
+</kw>
+<suite id="s1-s1" name="E2E" source="/tests/e2e">
+<suite id="s1-s1-s1" name="Basic" source="/tests/e2e/basic.robot">
+<kw name="Open Application" owner="browser" type="SETUP">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>opening url ${url}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-07-08T14:36:27.981048" elapsed="0.000283"/>
+</kw>
+<kw name="New Browser" owner="Browser">
+<msg time="2025-07-08T14:36:27.981990" level="INFO">{"browser": "chromium", "headless": true, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "/report/browser/traces/temp/3edad650-3b4d-4afa-9253-8993f9723dd9"}</msg>
+<msg time="2025-07-08T14:36:27.984811" level="INFO">Starting Browser process /home/pwuser/.local/lib/python3.12/site-packages/Browser/wrapper/index.js using port 40369</msg>
+<msg time="2025-07-08T14:36:27.984861" level="INFO">Node startup parameters: ['node', '/home/pwuser/.local/lib/python3.12/site-packages/Browser/wrapper/index.js', '40369']</msg>
+<msg time="2025-07-08T14:36:28.373697" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":true,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"/report/browser/traces/temp/3edad650-3b4d-4afa-9253-8993f9723dd9"}</msg>
+<arg>chromium</arg>
+<arg>headless=True</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2025-07-08T14:36:27.981452" elapsed="0.392385"/>
+</kw>
+<kw name="New Context" owner="Browser">
+<msg time="2025-07-08T14:36:28.375146" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": false,
+  "forcedColors": "none",
+  "ignoreHTTPSErrors": true,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "serviceWorkers": "allow",
+  "viewport": {
+    "width": 1920,
+    "height": 1080
+  }
+}</msg>
+<msg time="2025-07-08T14:36:28.382453" level="INFO">Successfully created context. </msg>
+<msg time="2025-07-08T14:36:28.382520" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': True, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'width': 1920, 'height': 1080}}</msg>
+<arg>viewport={'width': 1920, 'height': 1080}</arg>
+<arg>ignoreHTTPSErrors=${True}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new BrowserContext with specified options.</doc>
+<status status="PASS" start="2025-07-08T14:36:28.374050" elapsed="0.008540"/>
+</kw>
+<kw name="New Page" owner="Browser">
+<msg time="2025-07-08T14:36:28.682921" level="INFO">Successfully initialized new page object and opened url: http://localhost:8200</msg>
+<arg>${url}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2025-07-08T14:36:28.382755" elapsed="0.300329"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-07-08T14:36:28.839751" level="INFO">Waited for Element with selector css=#loading-page at state hidden</msg>
+<arg>css=#loading-page</arg>
+<arg>hidden</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-07-08T14:36:28.683240" elapsed="0.156648"/>
+</kw>
+<arg>${UI_FWK_HOST}</arg>
+<status status="PASS" start="2025-07-08T14:36:27.980287" elapsed="0.859711"/>
+</kw>
+<test id="s1-s1-s1-t1" name="Basic Test" line="10">
+<kw name="Delete All Cookies" owner="Browser">
+<msg time="2025-07-08T14:36:28.857501" level="INFO">All cookies deleted.</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Deletes all cookies from the currently active browser context.</doc>
+<status status="PASS" start="2025-07-08T14:36:28.853913" elapsed="0.003701"/>
+</kw>
+<kw name="Get Text" owner="Browser">
+<msg time="2025-07-08T14:36:28.877026" level="INFO">Text: 'Welcome to the UI Framework'</msg>
+<msg time="2025-07-08T14:36:28.877159" level="INFO">${result} = Welcome to the UI Framework</msg>
+<var>${result}</var>
+<arg>css=h1</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2025-07-08T14:36:28.857836" elapsed="0.019339"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${result}</arg>
+<arg>Welcome to the UI Framework</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2025-07-08T14:36:28.877409" elapsed="0.000242"/>
+</kw>
+<tag>e2e</tag>
+<tag>e2e basic</tag>
+<status status="PASS" start="2025-07-08T14:36:28.840085" elapsed="0.037700"/>
+</test>
+<status status="PASS" start="2025-07-08T14:36:27.910844" elapsed="0.973268"/>
+</suite>
+<suite id="s1-s1-s2" name="Components" source="/tests/e2e/components">
+<suite id="s1-s1-s2-s1" name="Checklist" source="/tests/e2e/components/checklist.robot">
+<kw name="Open Application" owner="browser" type="SETUP">
+<kw name="Log To Console" owner="BuiltIn">
+<arg>opening url ${url}</arg>
+<doc>Logs the given message to the console.</doc>
+<status status="PASS" start="2025-07-08T14:36:28.912430" elapsed="0.000169"/>
+</kw>
+<kw name="New Browser" owner="Browser">
+<msg time="2025-07-08T14:36:28.913029" level="INFO">Switching browser to browser=ced3d708-d1f5-4a11-a3a7-aa10d072f8d9</msg>
+<msg time="2025-07-08T14:36:28.914571" level="INFO">Successfully changed active browser: browser=ced3d708-d1f5-4a11-a3a7-aa10d072f8d9</msg>
+<msg time="2025-07-08T14:36:28.914628" level="INFO">Reusing existing browser with id: browser=ced3d708-d1f5-4a11-a3a7-aa10d072f8d9</msg>
+<arg>chromium</arg>
+<arg>headless=True</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2025-07-08T14:36:28.912696" elapsed="0.001964"/>
+</kw>
+<kw name="New Context" owner="Browser">
+<msg time="2025-07-08T14:36:28.915567" level="INFO">{
+  "acceptDownloads": true,
+  "bypassCSP": false,
+  "forcedColors": "none",
+  "ignoreHTTPSErrors": true,
+  "javaScriptEnabled": true,
+  "offline": false,
+  "reducedMotion": "no-preference",
+  "serviceWorkers": "allow",
+  "viewport": {
+    "width": 1920,
+    "height": 1080
+  }
+}</msg>
+<msg time="2025-07-08T14:36:28.919064" level="INFO">Successfully created context. </msg>
+<msg time="2025-07-08T14:36:28.919107" level="INFO">{'acceptDownloads': True, 'bypassCSP': False, 'forcedColors': 'none', 'ignoreHTTPSErrors': True, 'javaScriptEnabled': True, 'offline': False, 'reducedMotion': 'no-preference', 'serviceWorkers': 'allow', 'viewport': {'width': 1920, 'height': 1080}}</msg>
+<arg>viewport={'width': 1920, 'height': 1080}</arg>
+<arg>ignoreHTTPSErrors=${True}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new BrowserContext with specified options.</doc>
+<status status="PASS" start="2025-07-08T14:36:28.914768" elapsed="0.004389"/>
+</kw>
+<kw name="New Page" owner="Browser">
+<msg time="2025-07-08T14:36:29.210592" level="INFO">Successfully initialized new page object and opened url: http://localhost:8200</msg>
+<arg>${url}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2025-07-08T14:36:28.919275" elapsed="0.291470"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2025-07-08T14:36:29.349640" level="INFO">Waited for Element with selector css=#loading-page at state hidden</msg>
+<arg>css=#loading-page</arg>
+<arg>hidden</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2025-07-08T14:36:29.210913" elapsed="0.138863"/>
+</kw>
+<arg>${UI_FWK_HOST}</arg>
+<status status="PASS" start="2025-07-08T14:36:28.912158" elapsed="0.437715"/>
+</kw>
+<test id="s1-s1-s2-s1-t1" name="Check first item" line="10">
+<kw name="Delete All Cookies" owner="Browser">
+<msg time="2025-07-08T14:36:29.356533" level="INFO">All cookies deleted.</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Deletes all cookies from the currently active browser context.</doc>
+<status status="PASS" start="2025-07-08T14:36:29.353567" elapsed="0.003068"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-07-08T14:36:29.357169" level="INFO">Clicks the element 'css=#checklist .check-list-item &gt;&gt; nth=0'.</msg>
+<arg>css=#checklist .check-list-item &gt;&gt; nth=0</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-07-08T14:36:29.356844" elapsed="0.042123"/>
+</kw>
+<kw name="Check Element Does Not Have Class" owner="browser">
+<kw name="Get Attribute" owner="Browser">
+<msg time="2025-07-08T14:36:29.412723" level="INFO">Attribute is: 'check-list-item'</msg>
+<msg time="2025-07-08T14:36:29.412876" level="INFO">${element_class} = check-list-item</msg>
+<var>${element_class}</var>
+<arg>${element}</arg>
+<arg>class</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the HTML ``attribute`` of the element found by ``selector``.</doc>
+<status status="PASS" start="2025-07-08T14:36:29.399555" elapsed="0.013341"/>
+</kw>
+<kw name="Should Not Contain" owner="BuiltIn">
+<arg>${element_class}</arg>
+<arg>${class}</arg>
+<doc>Fails if ``container`` contains ``item`` one or more times.</doc>
+<status status="PASS" start="2025-07-08T14:36:29.413046" elapsed="0.000200"/>
+</kw>
+<arg>css=#checklist .check-list-item &gt;&gt; nth=1</arg>
+<arg>checked</arg>
+<status status="PASS" start="2025-07-08T14:36:29.399240" elapsed="0.014063"/>
+</kw>
+<tag>e2e</tag>
+<tag>e2e components checklist</tag>
+<status status="PASS" start="2025-07-08T14:36:29.349949" elapsed="0.063498"/>
+</test>
+<test id="s1-s1-s2-s1-t2" name="Check all items" line="16">
+<kw name="Delete All Cookies" owner="Browser">
+<msg time="2025-07-08T14:36:29.426718" level="INFO">All cookies deleted.</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Deletes all cookies from the currently active browser context.</doc>
+<status status="PASS" start="2025-07-08T14:36:29.422910" elapsed="0.003899"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-07-08T14:36:29.427327" level="INFO">Clicks the element 'css=#checklist .check-list-item &gt;&gt; nth=1'.</msg>
+<arg>css=#checklist .check-list-item &gt;&gt; nth=1</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-07-08T14:36:29.427003" elapsed="0.036614"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-07-08T14:36:29.464255" level="INFO">Clicks the element 'css=#checklist .check-list-item &gt;&gt; nth=2'.</msg>
+<arg>css=#checklist .check-list-item &gt;&gt; nth=2</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-07-08T14:36:29.463871" elapsed="0.033128"/>
+</kw>
+<kw name="Check Element Has Class" owner="browser">
+<kw name="Get Attribute" owner="Browser">
+<msg time="2025-07-08T14:36:29.506862" level="INFO">Attribute is: 'check-list-item checked'</msg>
+<msg time="2025-07-08T14:36:29.506980" level="INFO">${element_class} = check-list-item checked</msg>
+<var>${element_class}</var>
+<arg>${element}</arg>
+<arg>class</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the HTML ``attribute`` of the element found by ``selector``.</doc>
+<status status="PASS" start="2025-07-08T14:36:29.497697" elapsed="0.009299"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${element_class}</arg>
+<arg>${class}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-07-08T14:36:29.507155" elapsed="0.000208"/>
+</kw>
+<arg>css=#checklist .check-list-item &gt;&gt; nth=0</arg>
+<arg>checked</arg>
+<status status="PASS" start="2025-07-08T14:36:29.497304" elapsed="0.010118"/>
+</kw>
+<kw name="Check Element Has Class" owner="browser">
+<kw name="Get Attribute" owner="Browser">
+<msg time="2025-07-08T14:36:29.524934" level="INFO">Attribute is: 'check-list-item checked'</msg>
+<msg time="2025-07-08T14:36:29.525048" level="INFO">${element_class} = check-list-item checked</msg>
+<var>${element_class}</var>
+<arg>${element}</arg>
+<arg>class</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the HTML ``attribute`` of the element found by ``selector``.</doc>
+<status status="PASS" start="2025-07-08T14:36:29.507816" elapsed="0.017248"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${element_class}</arg>
+<arg>${class}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-07-08T14:36:29.525205" elapsed="0.000190"/>
+</kw>
+<arg>css=#checklist .check-list-item &gt;&gt; nth=1</arg>
+<arg>checked</arg>
+<status status="PASS" start="2025-07-08T14:36:29.507594" elapsed="0.017854"/>
+</kw>
+<kw name="Check Element Has Class" owner="browser">
+<kw name="Get Attribute" owner="Browser">
+<msg time="2025-07-08T14:36:29.532196" level="INFO">Attribute is: 'check-list-item checked'</msg>
+<msg time="2025-07-08T14:36:29.532284" level="INFO">${element_class} = check-list-item checked</msg>
+<var>${element_class}</var>
+<arg>${element}</arg>
+<arg>class</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the HTML ``attribute`` of the element found by ``selector``.</doc>
+<status status="PASS" start="2025-07-08T14:36:29.525842" elapsed="0.006457"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${element_class}</arg>
+<arg>${class}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-07-08T14:36:29.532493" elapsed="0.000171"/>
+</kw>
+<arg>css=#checklist .check-list-item &gt;&gt; nth=2</arg>
+<arg>checked</arg>
+<status status="PASS" start="2025-07-08T14:36:29.525625" elapsed="0.007108"/>
+</kw>
+<tag>e2e</tag>
+<tag>e2e components checklist</tag>
+<status status="PASS" start="2025-07-08T14:36:29.419566" elapsed="0.113293"/>
+</test>
+<test id="s1-s1-s2-s1-t3" name="Click on single item when all are checked should uncheck all but item" line="26">
+<kw name="Delete All Cookies" owner="Browser">
+<msg time="2025-07-08T14:36:29.543017" level="INFO">All cookies deleted.</msg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Deletes all cookies from the currently active browser context.</doc>
+<status status="PASS" start="2025-07-08T14:36:29.539933" elapsed="0.003199"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-07-08T14:36:29.543697" level="INFO">Clicks the element 'css=#checklist .check-list-item &gt;&gt; nth=1'.</msg>
+<arg>css=#checklist .check-list-item &gt;&gt; nth=1</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-07-08T14:36:29.543350" elapsed="0.036709"/>
+</kw>
+<kw name="Check Element Does Not Have Class" owner="browser">
+<kw name="Get Attribute" owner="Browser">
+<msg time="2025-07-08T14:36:29.587241" level="INFO">Attribute is: 'check-list-item'</msg>
+<msg time="2025-07-08T14:36:29.587355" level="INFO">${element_class} = check-list-item</msg>
+<var>${element_class}</var>
+<arg>${element}</arg>
+<arg>class</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the HTML ``attribute`` of the element found by ``selector``.</doc>
+<status status="PASS" start="2025-07-08T14:36:29.580629" elapsed="0.006741"/>
+</kw>
+<kw name="Should Not Contain" owner="BuiltIn">
+<arg>${element_class}</arg>
+<arg>${class}</arg>
+<doc>Fails if ``container`` contains ``item`` one or more times.</doc>
+<status status="PASS" start="2025-07-08T14:36:29.587510" elapsed="0.000195"/>
+</kw>
+<arg>css=#checklist .check-list-item &gt;&gt; nth=0</arg>
+<arg>checked</arg>
+<status status="PASS" start="2025-07-08T14:36:29.580338" elapsed="0.007452"/>
+</kw>
+<kw name="Check Element Has Class" owner="browser">
+<kw name="Get Attribute" owner="Browser">
+<msg time="2025-07-08T14:36:29.596562" level="INFO">Attribute is: 'check-list-item checked'</msg>
+<msg time="2025-07-08T14:36:29.596681" level="INFO">${element_class} = check-list-item checked</msg>
+<var>${element_class}</var>
+<arg>${element}</arg>
+<arg>class</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the HTML ``attribute`` of the element found by ``selector``.</doc>
+<status status="PASS" start="2025-07-08T14:36:29.588205" elapsed="0.008493"/>
+</kw>
+<kw name="Should Contain" owner="BuiltIn">
+<arg>${element_class}</arg>
+<arg>${class}</arg>
+<doc>Fails if ``container`` does not contain ``item`` one or more times.</doc>
+<status status="PASS" start="2025-07-08T14:36:29.596839" elapsed="0.000186"/>
+</kw>
+<arg>css=#checklist .check-list-item &gt;&gt; nth=1</arg>
+<arg>checked</arg>
+<status status="PASS" start="2025-07-08T14:36:29.587982" elapsed="0.009097"/>
+</kw>
+<kw name="Check Element Does Not Have Class" owner="browser">
+<kw name="Get Attribute" owner="Browser">
+<msg time="2025-07-08T14:36:29.603612" level="INFO">Attribute is: 'check-list-item'</msg>
+<msg time="2025-07-08T14:36:29.603710" level="INFO">${element_class} = check-list-item</msg>
+<var>${element_class}</var>
+<arg>${element}</arg>
+<arg>class</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the HTML ``attribute`` of the element found by ``selector``.</doc>
+<status status="PASS" start="2025-07-08T14:36:29.597471" elapsed="0.006255"/>
+</kw>
+<kw name="Should Not Contain" owner="BuiltIn">
+<arg>${element_class}</arg>
+<arg>${class}</arg>
+<doc>Fails if ``container`` contains ``item`` one or more times.</doc>
+<status status="PASS" start="2025-07-08T14:36:29.603845" elapsed="0.000186"/>
+</kw>
+<arg>css=#checklist .check-list-item &gt;&gt; nth=2</arg>
+<arg>checked</arg>
+<status status="PASS" start="2025-07-08T14:36:29.597262" elapsed="0.006831"/>
+</kw>
+<tag>e2e</tag>
+<tag>e2e components checklist</tag>
+<status status="PASS" start="2025-07-08T14:36:29.536521" elapsed="0.067706"/>
+</test>
+<status status="PASS" start="2025-07-08T14:36:28.909134" elapsed="0.698510"/>
+</suite>
+<status status="PASS" start="2025-07-08T14:36:28.908351" elapsed="0.712972"/>
+</suite>
+<status status="PASS" start="2025-07-08T14:36:27.910195" elapsed="1.711360"/>
+</suite>
+<status status="PASS" start="2025-07-08T14:36:27.894021" elapsed="1.727766"/>
+</suite>
+<statistics>
+<total>
+<stat pass="4" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="4" fail="0" skip="0">e2e</stat>
+<stat pass="1" fail="0" skip="0">e2e basic</stat>
+<stat pass="3" fail="0" skip="0">e2e components checklist</stat>
+</tag>
+<suite>
+<stat pass="4" fail="0" skip="0" id="s1" name="Tests">Tests</stat>
+<stat pass="4" fail="0" skip="0" id="s1-s1" name="E2E">Tests.E2E</stat>
+<stat pass="1" fail="0" skip="0" id="s1-s1-s1" name="Basic">Tests.E2E.Basic</stat>
+<stat pass="3" fail="0" skip="0" id="s1-s1-s2" name="Components">Tests.E2E.Components</stat>
+<stat pass="3" fail="0" skip="0" id="s1-s1-s2-s1" name="Checklist">Tests.E2E.Components.Checklist</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

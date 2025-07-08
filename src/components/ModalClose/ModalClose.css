@@ -1,0 +1,18 @@
+.modal-close{
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    cursor: pointer;
+    background-color: rgb(var(--theme-color-2));
+    border-radius: 100px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.8;
+    font-size: 20px;
+}
+    .modal-close:hover{
+        opacity: 1;
+    }

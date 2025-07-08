@@ -1,0 +1,26 @@
+.loading-user-link{
+    display: inline-flex;
+    font-size: 15px;
+    align-items: center;
+    text-decoration: none;
+    
+}
+    .loading-user-link-image{
+        height: 1.5em;
+        width: 1.5em;
+        border-radius: 100px;
+        background-size: contain;
+        background-position: center;
+        margin-right: 5px;
+        background-color: rgb(var(--loading-color-2));
+
+    }
+    .loading-user-link-name{
+        line-height: 1em;
+        font-size: 1em;
+        font-weight: 800;
+        background-color: rgb(var(--loading-color-2));
+        border-radius: var(--loading-item-radius);
+        height: 1.2em;
+        width: 7em;
+    }
